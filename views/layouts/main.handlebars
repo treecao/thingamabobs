@@ -20,15 +20,15 @@
             {{#if loggedIn}}
             {{!-- navigate to home page --}}
             <a href="/" class="navbar-item is-hoverable pt-1">HOME</a>
-            <a href="/{{!--TODO: add route to contact us here --}}" class="navbar-item is-hoverable pt-1">CONTACT US</a>
-            <a href="/{{!--TODO: add route to Post Item for sale here --}}" class="navbar-item is-hoverable pt-1 mr-4">SELL</a>
-            <a href="/{{!--TODO: add route to Shopping Cart here --}}" class="navbar-item is-hoverable pt-1 mr-4">BUY {{!--possibly add shopping cart icon here--}}</a>
+            <a href="/contact" class="navbar-item is-hoverable pt-1">CONTACT US</a>
+            <a href="/sell" class="navbar-item is-hoverable pt-1 mr-4">SELL</a>
+            <a href="/cart" class="navbar-item is-hoverable pt-1 mr-4">CART {{!--possibly add shopping cart icon here--}}</a>
             <button id="logout" class="button is-danger">logout</button>
             {{else}}
             <a href="/" class="navbar-item is-hoverable pt-1">HOME</a>
-            <a href="/{{!--TODO: add route to contact us here --}}" class="navbar-item is-hoverable pt-1">CONTACT US</a>
-            <a href="/{{!--TODO: add route to Shopping Cart as a guest here --}}" class="navbar-item is-hoverable pt-1 mr-4">TBD Shopping Cart Icon</a>
-            <a href="/{{!!--TODO: add route To Log In here --}}" class="button is-primary">LOGIN</a>
+            <a href="/contact" class="navbar-item is-hoverable pt-1">CONTACT US</a>
+            <a href="/cart" class="navbar-item is-hoverable pt-1 mr-4">TBD Shopping Cart Icon</a>
+            <a href="/login" class="button is-primary">LOGIN</a>
             {{/if}}
         </nav>
     </header>
