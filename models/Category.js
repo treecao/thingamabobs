@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-
+// const sequelize = new Sequelize('sqlite::memory:');
 const sequelize = require('../config/connection');
 
 class Category extends Model {}
