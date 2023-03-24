@@ -1,2 +1,3 @@
 .env
+node_modules
 # add node modules here once we've set them up
