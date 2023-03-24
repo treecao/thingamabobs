@@ -3,6 +3,7 @@ const Product = require('./Product');
 const Category = require('./Category');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
+const TagCategory = require('./TagCategory');
 
 // Products belongsTo Category
 Product.belongsTo(Category, {
@@ -30,9 +31,21 @@ Tag.belongsToMany(Product, {
   onDelete: 'CASCADE',
 });
 
+// this might be an issue if there are future bugs
+Tag.belongsTo(TagCategory, {
+  foreignKey: 'tag_category',
+  onDelete: 'CASCADE',
+});
+
+TagCategory.hasMany(Tag, {
+  foreignKey: 'tag_category',
+  onDelete: 'CASCADE',
+});
+
 module.exports = {
   Product,
   Category,
   Tag,
   ProductTag,
+  TagCategory,
 };
