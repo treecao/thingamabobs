@@ -20,14 +20,17 @@
         <nav class="navbar mt-2">
             {{#if loggedIn}}
             {{!-- navigate to home page --}}
+            {{!-- Nav bar - Home page (purchase/sell options) | Cataglog | Sell | Cart | Contact US --}}
             <a href="/" class="navbar-item is-hoverable pt-1">HOME</a>
             <a href="/contact" class="navbar-item is-hoverable pt-1">CONTACT US</a>
+            <a href="/catalog" class="navbar-item is-hoverable pt-1">CATALOG</a>
             <a href="/sell" class="navbar-item is-hoverable pt-1 mr-4">SELL</a>
             <a href="/cart" class="navbar-item is-hoverable pt-1 mr-4">CART {{!--possibly add shopping cart icon here--}}</a>
             <button id="logout" class="button is-danger">logout</button>
             {{else}}
             <a href="/" class="navbar-item is-hoverable pt-1">HOME</a>
             <a href="/contact" class="navbar-item is-hoverable pt-1">CONTACT US</a>
+            <a href="/catalog" class="navbar-item is-hoverable pt-1">CATALOG</a>
             <a href="/cart" class="navbar-item is-hoverable pt-1 mr-4">TBD Shopping Cart Icon</a>
             <a href="/login" class="button is-primary">LOGIN</a>
             {{/if}}
