@@ -1,4 +1,5 @@
 // import models
+const User = require("./user")
 const Product = require('./Product');
 const Category = require('./Category');
 const Tag = require('./Tag');
@@ -48,4 +49,6 @@ module.exports = {
   Tag,
   ProductTag,
   TagCategory,
+  User,
 };
+
