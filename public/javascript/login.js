@@ -1,10 +1,12 @@
 async function loginFormHandler(event) {
+  // Stop the browser from submitting the form so we can do so with JavaScript
     event.preventDefault();
   
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
     if (email && password) {
+      // Send the e-mail and password to the server
       const response = await fetch('/api/users/login', {
         method: 'post',
         body: JSON.stringify({
@@ -15,7 +17,8 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        // document.location.replace('/dashboard');
+        document.location.replace('/sell');
+        console.log('Login successful');
       } else {
         alert(response.statusText);
       }
@@ -48,6 +51,7 @@ const signupFormHandler = async (event) => {
   document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
+
 
   document
   .querySelector('.signup-form')
