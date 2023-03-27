@@ -1,6 +1,6 @@
 {{!-- anything in this file will appear on every single page the user navigates to --}}
 <!DOCTYPE html>
-<html lang="en">
+<html class="has-navbar-fixed-top" lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -10,29 +10,46 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
   <link rel="stylesheet" href="/stylesheets/style.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
   <div class="wrapper">
     <header>
         {{!-- TODO: DEFINE THE PAGE NAME --}}
-        <h1 class="has-text-black px-3 py-3 has-text-weight-bold">MAIN FIRST PAGE HEADER</h1>
+        {{!-- <h1 class="has-text-black px-3 py-3 has-text-weight-bold">MAIN FIRST PAGE HEADER</h1> --}}
         {{!-- navigation bar --}}
-        <nav class="navbar mt-2">
+        <nav class="navbar is-light is-fixed-top">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+            <img src="https://i.ibb.co/x301BVB/Original-on-Transparent.png" alt="Thingamabob">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            </a>
+          </div>
+
             {{#if loggedIn}}
             {{!-- navigate to home page --}}
             {{!-- Nav bar - Home page (purchase/sell options) | Cataglog | Sell | Cart | Contact US --}}
-            <a href="/" class="navbar-item is-hoverable pt-1">HOME</a>
-            <a href="/catalog" class="navbar-item is-hoverable pt-1">CATALOG</a>
-            <a href="/sell" class="navbar-item is-hoverable pt-1 mr-4">SELL</a>
-            <a href="/cart" class="navbar-item is-hoverable pt-1 mr-4">CART {{!--possibly add shopping cart icon here--}}</a>
+            <a href="/" class="navbar-item is-hoverable pt-1">Home</a>
+            <a href="/catalog" class="navbar-item is-hoverable pt-1">Catalog</a>
+            <a href="/sell" class="navbar-item is-hoverable pt-1 mr-4">Sell</a>
+            <a href="/cart" class="navbar-item is-hoverable pt-1"><span class="material-icons">shopping_bag</span></a>
             <button id="logout" class="button is-danger">logout</button>
             {{else}}
-            <a href="/" class="navbar-item is-hoverable pt-1">HOME</a>
-            <a href="/catalog" class="navbar-item is-hoverable pt-1">CATALOG</a>
-            <a href="/cart" class="navbar-item is-hoverable pt-1 mr-4">Cart</a>
-            <a href="/contact" class="navbar-item is-hoverable pt-1">CONTACT US</a>
-            <a href="/login" class="button is-primary">LOGIN</a>
-            <a href="/sign-up" class="navbar-item is-hoverable pt-1">SIGN UP</a>
+            <a href="/" class="navbar-item is-hoverable pt-1">Home</a>
+            <a href="/catalog" class="navbar-item is-hoverable pt-1">Catalog</a>
+            {{!-- <a href="/contact" class="navbar-item is-hoverable pt-1">Contact Us</a> --}}
+            {{!-- <a href="/sign-up" class="navbar-item is-hoverable pt-1">SIGN UP</a> --}}
+            <div class="navbar-end">
+            <a href="/cart" class="navbar-item pt-1"><span class="material-icons">shopping_bag</span></a>
+            <a href="/login" class="navbar-item is-hoverable pt-1"><span class="material-icons">account_circle</span></a>
+            </div>
+            
+            
             {{/if}}
         </nav>
     </header>
@@ -45,7 +62,9 @@
     {{!-- team members: Amrita, Daniel, Isaiah, Matt, Roman, Tree --}}
       <div class="row-is-full content has-text-centered">
     <p>
-      <strong>Site Creators</strong> [heart emoji here] <a href="{{!--add gh--}}">Amrita</a> | <a href="{{!--add gh--}}">Daniel</a> | <a href="{{!--add gh--}}">Isaiah</a> | <a href="{{!--add gh--}}">Matt</a> | <a href="{{!--add gh--}}">Roman</a> | <a href="{{!--add gh--}}">Tree</a>
+      <strong>Site Creators</strong> <span class="icon">
+     <i class="fas fa-heart"></i>
+     </span><a href="{{!--add gh--}}">Amrita</a> | <a href="{{!--add gh--}}">Daniel</a> | <a href="{{!--add gh--}}">Isaiah</a> | <a href="{{!--add gh--}}">Matt</a> | <a href="{{!--add gh--}}">Roman</a> | <a href="{{!--add gh--}}">Tree</a>
     </p>
   </div>
     </footer>

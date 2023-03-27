@@ -1,23 +1,42 @@
-<div class="column">
-<h2 class="title pb-4">Create New Account:</h2><hr>
+<section class="column is-one-third container">
+
+<h2 class="title has-text-centered">Create New Account</h2><hr>
 <form class="signup-form">
-  <div>
-    <label for="username-signup">Username:</label>
-    <input type="text" id="username-signup"/>
-  </div>
-  <div>
+  {{!-- Username Field --}}
+  <div class="field">
+     <label for="username-signup">Username:</label>
+    <p class="control has-icons-left has-icons-right">
+     <input class="input is-rounded" type="email" id="username-signup">
+     <span class="icon is-small is-left">
+     <i class="fas fa-user"></i>
+     </span>
+    </p>
+  {{!-- Email Field --}}
+  <div class="field">
     <label for="email-signup">Email:</label>
-    <input type="text" id="email-signup"/>
+    <p class="control has-icons-left has-icons-right">
+     <input class="input is-rounded" type="email" id="email-signup">
+     <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+     </span>
+     </span>
+    </p>
+  {{!-- Password Field --}}
+  <div class="field">
+     <label for="password-signup">Password:</label>
+    <p class="control has-icons-left">
+    <input class="input is-rounded" type="password" id="password-signup">
+    <span class="icon is-small is-left">
+      <i class="fas fa-lock"></i>
+    </span>
+    </p>
   </div>
-  <div>
-    <label for="password-signup">Password:</label>
-    <input type="password" id="password-signup"/>
-  </div>
-  <div>
-    <button type="submit" class="button is-primary">Sign Up</button>
+
+  <div class="is-grouped-centered">
+    <button type="submit" class="button is-primary is-fullwidth is-rounded">Sign Up</button>
   </div>
 </form>
-</div>
+</section>
 
 <!-- javascript file-->
 <script src="/javascript/signup.js"></script>
