@@ -1,25 +1,28 @@
 {{!-- shopping cart template --}}
-<div class="small-container">
-    <table>
-        <tr>
-            <th>products</th>
-            <th>quantity</th>
-            <th>subtotal</th>
+<div class="ml-4">
+    <table class="table is-hoverable table is-fullwidth is-centered">
+        <tr class="columns mr-4 mt-2">
+            <th class="column is-one-third">Products</th>
+            <th class="column is-one-fifth">Quantity</th>
+            <th class="column is-one-fifth">Subtotal</th>
         </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="https://via.placeholder.com/150">
-                    <div>
-                        <p>THIS IS AN EXAMPLE PIC</p>
+        <tr class="columns mb-4">
+            <td class="column is-one-third">
+                <div class="cart-info box">
+                    <article class="media">
+                        <div  class="media-left">
+                            <figure class="image is-64x64"><img src="https://via.placeholder.com/150"></figure>
+                        </div>
+                    <div class="media-right">
+                        <p>Product Name</p>
                         <small>$50.00</small>
-                        <a href="">remove</a>
+                        <p><a href="">remove</a></p>
                     </div>
+                    </article>
                 </div>
             </td>
-            <td>product name</td>
-            <td><input type="number" value="1"></td>
-            <td>$50.00</td>
+            <td class="column is-one-fifth"><input type="number" value="1"></td>
+            <td class="column is-one-fifth">$50.00</td>
         </tr>
     </table>
 </div>
