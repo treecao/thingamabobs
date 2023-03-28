@@ -23,6 +23,9 @@ const seedAll = async () => {
   await seedProductTags();
   console.log('\n----- PRODUCT TAGS SEEDED -----\n');
 
+  await seedUserData();
+  console.log('\n----- USER DATA SEEDED INTO DB -----\n');
+
   process.exit(0);
 };
 

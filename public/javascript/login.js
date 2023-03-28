@@ -1,11 +1,11 @@
-async function loginFormHandler(event) {
+const loginFormHandler = async (event) => {
     event.preventDefault();
   
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
     if (email && password) {
-      const response = await fetch('/api/users/login', {
+      const response = await fetch('/api/user/login', {
         method: 'post',
         body: JSON.stringify({
           email,
@@ -18,9 +18,9 @@ async function loginFormHandler(event) {
         console.log("logged in");
         document.location.replace('/');
       } else {
-        alert(response.statusText);
+        alert("invalid login");
       }
     }
   }
-
+ 
   document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
