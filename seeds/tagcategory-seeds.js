@@ -2,28 +2,28 @@ const { TagCategory } = require('../models');
 
 const tagCategoryData = [
   {
-    tag_category_name: 'rock music',
+    tag_category_name: 'Shoes',
   },
   {
-    tag_category_name: 'pop music',
+    tag_category_name: 'Color',
   },
   {
-    tag_category_name: 'blue',
+    tag_category_name: 'Size',
   },
   {
-    tag_category_name: 'red',
+    tag_category_name: 'Sport',
   },
   {
-    tag_category_name: 'green',
+    tag_category_name: 'Gender',
   },
   {
-    tag_category_name: 'white',
+    tag_category_name: 'Tops',
   },
   {
-    tag_category_name: 'gold',
+    tag_category_name: 'Bottoms',
   },
   {
-    tag_category_name: 'pop culture',
+    tag_category_name: 'Fit',
   },
 ];
 
