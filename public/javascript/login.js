@@ -1,4 +1,4 @@
-async function loginFormHandler(event) {
+const loginFormHandler = async (event) => {
     event.preventDefault();
   
     const email = document.querySelector('#email-login').value.trim();
@@ -18,7 +18,7 @@ async function loginFormHandler(event) {
         console.log("logged in");
         document.location.replace('/');
       } else {
-        alert(response.statusText);
+        alert("invalid login");
       }
     }
   }
