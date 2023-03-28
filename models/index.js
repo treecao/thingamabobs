@@ -1,5 +1,5 @@
 // import models
-const User = require("./user")
+const User = require('./user');
 const Product = require('./Product');
 const Category = require('./Category');
 const Tag = require('./Tag');
@@ -28,15 +28,15 @@ Product.belongsToMany(Tag, {
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
   through: ProductTag,
-  foreignKey: 'product_id',
+  foreignKey: 'tag_id',
   onDelete: 'CASCADE',
 });
 
 // this might be an issue if there are future bugs
-Tag.belongsTo(TagCategory, {
-  foreignKey: 'tag_category',
-  onDelete: 'CASCADE',
-});
+// Tag.belongsTo(TagCategory, {
+//   foreignKey: 'tag_category',
+//   onDelete: 'CASCADE',
+// });
 
 TagCategory.hasMany(Tag, {
   foreignKey: 'tag_category',
@@ -51,4 +51,3 @@ module.exports = {
   TagCategory,
   User,
 };
-
