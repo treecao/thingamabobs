@@ -2,8 +2,10 @@ const router = require('express').Router();
 const { Product, Category, Tag, TagCategory } = require('../models');
 
 // route to get to landing HOME page
+
 router.get('/', async (req, res) => {
-  res.render('homepage');
+  res.render('homepage', {username:req.session.username,loggedIn:req.session.logged_in}); 
+
 });
 
 //route to login page

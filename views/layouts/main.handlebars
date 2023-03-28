@@ -36,15 +36,17 @@
             {{!-- Nav bar - Home page (purchase/sell options) | Cataglog | Sell | Cart | Contact US --}}
             <a href="/" class="navbar-item is-hoverable pt-1">Home</a>
             <a href="/catalog" class="navbar-item is-hoverable pt-1">Catalog</a>
-            <a href="/sell" class="navbar-item is-hoverable pt-1 mr-4">Sell</a>
+            <div class="navbar-end">
+             <h5>Hello, {{username}}</h5> 
             <a href="/cart" class="navbar-item is-hoverable pt-1"><span class="material-icons">shopping_bag</span></a>
-            <button id="logout" class="button is-danger">logout</button>
+            <button id="logout" class="button is-danger">logout</button></div>
             {{else}}
             <a href="/" class="navbar-item is-hoverable pt-1">Home</a>
             <a href="/catalog" class="navbar-item is-hoverable pt-1">Catalog</a>
             {{!-- <a href="/contact" class="navbar-item is-hoverable pt-1">Contact Us</a> --}}
             {{!-- <a href="/sign-up" class="navbar-item is-hoverable pt-1">SIGN UP</a> --}}
             <div class="navbar-end">
+
             <a href="/cart" class="navbar-item pt-1"><span class="material-icons">shopping_bag</span></a>
             <a href="/login" class="navbar-item is-hoverable pt-1"><span class="material-icons">account_circle</span></a>
             </div>

@@ -6,14 +6,15 @@ router.post('/', async (req, res) => {
     console.log("signup route")
   try {
     const userData = await User.create(req.body);
+console.log(userData); 
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+      req.session.username = userData.name; 
+      res.status(200).json(userData);
 
-    // req.session.save(() => {
-    //   req.session.user_id = userData.id;
-    //   req.session.logged_in = true;
-
-    //   res.status(200).json(userData);
-    // });
-    res.status(200).json(userData);
+    });
+    
   } catch (err) {
     res.status(400).json(err);
   }
@@ -23,8 +24,8 @@ router.post('/login', async (req, res) => {
   console.log("login route");
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
-    // debugger;
-    // console.log("RIGHTT HERE", userData);
+    
+
     if (!userData) {
       res
         .status(400)
@@ -41,20 +42,16 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    // req.session.save(() => {
-    //   console.log("this is running 1")
-    //   req.session.user_id = userData.id;
-    //   console.log("this is running 2")
-    //   req.session.logged_in = true;
-    //   console.log("this is running 3")
+    req.session.save(() => {
       
-    //   res.status(200).json({ user: userData, message: 'You are now logged in!' });
-    //   console.log("this is running 4")
-    //   return;
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+      req.session.username = userData.name; 
+      res.status(200).json(userData);
       
-    // });
+    });
     
-    res.status(200).json(userData);
+   
   } catch (err) {
     res.status(400).json(err);
   }
