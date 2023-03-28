@@ -1,2 +1,28 @@
-<h1 class="text-white">All the Thingamabobs</h1>
-{{!-- display 30 per page? --}}
+<h1 class='text-white'>All the Thingamabobs</h1>
+{{! display 30 per page? }}
+
+<!-- Loop over each object in the projects array -->
+{{#each products as |product|}}
+  <div class='row mb-4 catalog'>
+    <div class='col-md-5'>
+      <h2>
+        <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+
+        <a href='/catalog/product/{{product.id}}'>{{product.product_name}}</a>
+      </h2>
+      <p>
+        <img src='{{product.img}}' alt='Image' />
+
+      </p>
+      <p>Created by
+        {{product.id}}
+        on
+        {{product.id}}</p>
+    </div>
+    <div class='col-md-7'>
+      <p>
+        {{product.price}}
+      </p>
+    </div>
+  </div>
+{{/each}}
