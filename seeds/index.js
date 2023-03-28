@@ -24,6 +24,9 @@ const seedAll = async () => {
   await seedTagCategories();
   console.log('\n----- TAG CATEGORIES SEEDED -----\n');
 
+  await seedUserData(); 
+  console.log("\n----- USER DATA SEEDED INTO DB -----\n");
+
   process.exit(0);
 };
 
