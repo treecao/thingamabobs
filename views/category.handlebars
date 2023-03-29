@@ -1,1 +1,42 @@
-<h1>{{category.name}}</h1>
+<h1>{{category_name}}</h1>
+
+{{#each products as |product|}}
+
+  <div class='row mb-4 catalog'>
+    <div class='col-md-5'>
+      <h2>
+        <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+
+        <a href='/product/{{product.id}}'>{{product.product_name}}</a>
+      </h2>
+      <p>
+        <img src='{{product.img}}' alt='Image' />
+
+      </p>
+      <p>Created by
+        {{product.id}}
+        on
+        {{product.id}}</p>
+    </div>
+    <div class='col-md-7'>
+      <p>
+        {{product.price}}
+      </p>
+    </div>
+  </div>
+
+{{/each}}
+
+{{! The data you have to work with are each of the data points in the Product model and the Category model
+
+so that is 
+
+product.id
+product.product_name
+product.img
+product.price
+
+
+When using the category tag here you just need to call it by the data point of category
+category.id --> id
+category.category_name --> category_name}}

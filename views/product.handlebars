@@ -1,0 +1,42 @@
+<div class='row mb-4 catalog'>
+  <div class='col-md-5'>
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+
+      <a href='/product/{{id}}'>{{product_name}}</a>
+    </h2>
+    <p>
+      <img src='{{img}}' alt='Image' />
+
+    </p>
+    <p>tags
+      {{id}}
+      on
+      {{#each tags as |tag|}}
+        {{tag.tag_name}}
+      {{/each}}
+    </p>
+  </div>
+  <div class='col-md-7'>
+    <p>
+      {{price}}
+    </p>
+  </div>
+</div>
+
+{{! The data you have to work with are each of the data points in the Product model and the Tags
+
+when using product data just use the data point so
+
+product_name
+img
+description
+price
+stock
+category_id (integer)
+
+tags.tag_name --> if you use the #each as i have done then you will be able to display all the tags for the product
+
+
+
+}}
