@@ -313,6 +313,50 @@ const productTagData = [
     product_id: 21,
     tag_id: 44,
   },
+  {
+    product_id: 22,
+    tag_id: 2,
+  },
+  {
+    product_id: 22,
+    tag_id: 6,
+  },
+  {
+    product_id: 22,
+    tag_id: 7,
+  },
+  {
+    product_id: 23,
+    tag_id: 6,
+  },
+  {
+    product_id: 23,
+    tag_id: 44,
+  },
+  {
+    product_id: 24,
+    tag_id: 14,
+  },
+  {
+    product_id: 24,
+    tag_id: 38,
+  },
+  {
+    product_id: 25,
+    tag_id: 6,
+  },
+  {
+    product_id: 25,
+    tag_id: 13,
+  },
+  {
+    product_id: 26,
+    tag_id: 2,
+  },
+  {
+    product_id: 26,
+    tag_id: 44,
+  },
 ];
 
 const seedProductTags = () => ProductTag.bulkCreate(productTagData);
