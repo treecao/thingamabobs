@@ -177,6 +177,50 @@ const productData = [
     stock: 100,
     category_id: 9,
   },
+  {
+    product_name: 'PC',
+    img: "https://i.ytimg.com/vi/XxOxaEZ6nRY/maxresdefault.jpg",
+    description: 'extra most bestest pc',
+    price: 100.00,
+    stock: 10,
+    category_id: 2,
+    },
+    
+    {
+    product_name: 'monitor',
+    img: 'https://www.technewstoday.com/wp-content/uploads/2022/07/Best-Monitor-Settings-for-Eyes.jpg',
+    description: 'extra most bestest monitor',
+    price: 100.00,
+    stock: 2,
+    category_id: 2,
+    },
+    
+    {
+    product_name: 'mouse',
+    img: "https://img.buzzfeed.com/buzzfeed-static/static/2018-07/9/17/asset/buzzfeed-prod-web-04/sub-buzz-21940-1531172100-2.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto",
+    description: 'extra most bestest mouse',
+    price: 100.00,
+    stock: 1,
+    category_id: 9,
+    },
+    
+    {
+    product_name: 'keyboard',
+    img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTHKazKXSPVge4w_O9FBYKypAqpGJXeLdXgCriIHZekbY9I6mUW6Uw44c5cg4Fo_sBuaHwciK3EuJJ7O9Wrt2EClZxDayy2nsjnlKdeMphoXxcLb2A17NqCyA&usqp=CAE",
+    description: 'extra most bestest keyboard',
+    price: 100.00,
+    stock: 2,
+    category_id: 2,
+    },
+    
+    {
+    product_name: 'truck',
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4vCAo2-R4CnOBxiHrCJPDaq0WfYf65lHZtodJanr3Mw&usqp=CAU&ec=48665701",
+    description: 'big ol truck!',
+    price: 10.00,
+    stock: 2,
+    category_id: 6,
+    },
 ];
 
 const seedProducts = () => Product.bulkCreate(productData);
