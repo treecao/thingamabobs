@@ -25,30 +25,56 @@ router.get('/cart', async (req, res) => {
 router.get('/catalog', async (req, res) => {
   try {
     const productData = await Product.findAll();
+    const categoryData = await Category.findAll();
 
     const products = productData.map((product) => product.get({ plain: true }));
-    console.log(products);
-    res.render('catalog', { products });
+    const categories = categoryData.map((category) =>
+      category.get({ plain: true })
+    );
+    res.render('catalog', { products, categories });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 //route to specific category in catalog
-router.get('/catalog/category/:id', async (req, res) => {
+router.get('/category/:id', async (req, res) => {
   try {
     const categoryData = await Category.findByPk(req.params.id, {
       include: [
-        { model: Product, attributes: ['product_name', 'img', 'price'] },
-        { model: TagCategory, attributes: ['tag_category_name'] },
-        { model: Tag, attributes: ['tag_name'] },
+        {
+          model: Product,
+          attributes: ['id', 'product_name', 'img', 'price'],
+        },
       ],
     });
-    const categories = categoryData.map((category) =>
-      category.get({ plain: true })
-    );
-    console.log(categories);
-    res.render('category', { categories });
+
+    const category = categoryData.get({ plain: true });
+    console.log(category);
+    res.render('category', {
+      ...category,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+// route to specific product
+router.get('/product/:id', async (req, res) => {
+  try {
+    const productData = await Product.findByPk(req.params.id, {
+      include: [
+        {
+          model: Tag,
+          attributes: ['tag_name'],
+        },
+      ],
+    });
+
+    const product = productData.get({ plain: true });
+    console.log(product);
+    res.render('product', {
+      ...product,
+    });
   } catch (err) {
     res.status(500).json(err);
   }

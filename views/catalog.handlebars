@@ -1,6 +1,8 @@
 <h1 class='text-white'>All the Thingamabobs</h1>
 {{! display 30 per page? }}
-
+{{#each categories as |category|}}
+  <a href='/category/{{category.id}}'>{{category.category_name}}</a>
+{{/each}}
 <!-- Loop over each object in the projects array -->
 {{#each products as |product|}}
   <div class='row mb-4 catalog'>
@@ -8,7 +10,7 @@
       <h2>
         <!-- Call helper function with triple brackets to render the emoji span as HTML -->
 
-        <a href='/catalog/product/{{product.id}}'>{{product.product_name}}</a>
+        <a href='/product/{{product.id}}'>{{product.product_name}}</a>
       </h2>
       <p>
         <img src='{{product.img}}' alt='Image' />
@@ -26,3 +28,19 @@
     </div>
   </div>
 {{/each}}
+
+{{! The data you have to work with are each of the data points in the Product model and the Category model
+
+so that is 
+
+product.id
+product.product_name
+product.img
+product.description
+product.price
+product.stock
+product.category_id -- this is just the integer of category id
+
+
+category.id
+category.category_name }}
