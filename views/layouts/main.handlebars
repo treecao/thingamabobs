@@ -6,7 +6,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thingamabobs</title>
-  {{!-- bulma CSS for now, we can use a different framework later if y'all don't like it --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
   <link rel="stylesheet" href="/stylesheets/style.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -21,7 +20,7 @@
         <nav class="navbar is-light is-fixed-top">
           <div class="navbar-brand">
             <a class="navbar-item" href="/">
-            <img src="https://i.ibb.co/kHKHjPM/Logo.png" alt="Thingamabob">
+            <img src="assets\Logo.png" alt="Thingamabobs">
             </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -33,7 +32,6 @@
 
             {{#if loggedIn}}
             {{!-- navigate to home page --}}
-            {{!-- Nav bar - Home page (purchase/sell options) | Cataglog | Sell | Cart | Contact US --}}
             <a href="/" class="navbar-item is-hoverable pt-1"><span class="material-icons">home</span></a>
             <a href="/catalog" class="navbar-item is-hoverable pt-1"><span class="material-icons">sell</span></a>
             <div class="navbar-end">
@@ -63,15 +61,14 @@
     </main>
 
     <footer class="footer rows pb-2">
-    {{!-- team members: Amrita, Daniel, Isaiah, Matt, Roman, Tree --}}
       <div class="row-is-full content has-text-centered">
     <p>
       <span class="icon">
      <i class="fas fa-heart"></i> 
      </span><strong>Thingamabobs</strong><span class="icon">
      <i class="fas fa-heart"></i> 
-     </span><br> 20 Thingamabobs Ln. Thingamabobs,Tx 77777 <br>888-Hii-FWEN <br>support@thingamamobs.com <br> Copyright 2023
-     <a href="https://github.com/Amritaraja">Amrita Raja</a> | <a href="https://github.com/dbradley555">Daniel Bradley</a> | <a href="https://github.com/il1566144">Isaiah Love</a> | <a href="https://github.com/romanjamess">Matt Nguyen</a> | <a href="https://github.com/romanjamess">Roman Gonzalez</a> | <a href="https://github.com/treecao">Tree Cao</a>
+     </span><br> 20 Thingamabobs Ln. Thingamabobs,Tx 77777 <br>888-Hii-FWEN <br>support@thingamamobs.com <br> 
+     <a href="https://github.com/Amritaraja">Amrita Raja</a> | <a href="https://github.com/dbradley555">Daniel Bradley</a> | <a href="https://github.com/il1566144">Isaiah Love</a> | <a href="https://github.com/romanjamess">Matt Nguyen</a> | <a href="https://github.com/romanjamess">Roman Gonzalez</a> | <a href="https://github.com/treecao">Tree Cao</a> <br> Copyright 2023<br>
      
     </p>
   </div>
