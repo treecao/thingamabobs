@@ -21,7 +21,7 @@
         <nav class="navbar is-light is-fixed-top">
           <div class="navbar-brand">
             <a class="navbar-item" href="/">
-            <img src="https://i.ibb.co/x301BVB/Original-on-Transparent.png" alt="Thingamabob">
+            <img src="https://i.ibb.co/kHKHjPM/Logo.png" alt="Thingamabob">
             </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -34,15 +34,17 @@
             {{#if loggedIn}}
             {{!-- navigate to home page --}}
             {{!-- Nav bar - Home page (purchase/sell options) | Cataglog | Sell | Cart | Contact US --}}
-            <a href="/" class="navbar-item is-hoverable pt-1">Home</a>
-            <a href="/catalog" class="navbar-item is-hoverable pt-1">Catalog</a>
+            <a href="/" class="navbar-item is-hoverable pt-1"><span class="material-icons">home</span></a>
+            <a href="/catalog" class="navbar-item is-hoverable pt-1"><span class="material-icons">sell</span></a>
             <div class="navbar-end">
-             <h5>Hello, {{username}}</h5> 
+            <p class="pt-3">Hello, {{username}}</p> 
             <a href="/cart" class="navbar-item is-hoverable pt-1"><span class="material-icons">shopping_bag</span></a>
-            <button id="logout" class="button is-danger">logout</button></div>
+            <a href="/" id="logout" class="navbar-item is-hoverable pt-1"><span class="material-icons icon has-text-danger">logout</span></a>
+            {{!-- <button id="logout" class=""><span class="material-icons">logout</span></button> --}}
+            </div>
             {{else}}
-            <a href="/" class="navbar-item is-hoverable pt-1">Home</a>
-            <a href="/catalog" class="navbar-item is-hoverable pt-1">Catalog</a>
+            <a href="/" class="navbar-item is-hoverable pt-1"><span class="material-icons">home</span></a>
+            <a href="/catalog" class="navbar-item is-hoverable pt-1"><span class="material-icons">sell</span></a>
             {{!-- <a href="/contact" class="navbar-item is-hoverable pt-1">Contact Us</a> --}}
             {{!-- <a href="/sign-up" class="navbar-item is-hoverable pt-1">SIGN UP</a> --}}
             <div class="navbar-end">
@@ -64,7 +66,7 @@
     {{!-- team members: Amrita, Daniel, Isaiah, Matt, Roman, Tree --}}
       <div class="row-is-full content has-text-centered">
     <p>
-      <strong>Site Creators</strong> <span class="icon">
+      <strong>Made with </strong><span class="icon">
      <i class="fas fa-heart"></i>
      </span><a href="https://github.com/Amritaraja">Amrita</a> | <a href="https://github.com/dbradley555">Daniel</a> | <a href="https://github.com/il1566144">Isaiah</a> | <a href="https://github.com/romanjamess">Matt</a> | <a href="https://github.com/romanjamess">Roman</a> | <a href="https://github.com/treecao">Tree</a>
     </p>
