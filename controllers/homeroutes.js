@@ -5,10 +5,30 @@ const withAuth = require('../utils/auth');
 // route to get to landing HOME page
 
 router.get('/', async (req, res) => {
-  res.render('homepage', {
-    username: req.session.username,
-    loggedIn: req.session.logged_in,
-  });
+  try {
+    const productData = await Product.findAll({
+      attributes: ['id', 'product_name', 'img', 'price'],
+      where: {
+        id: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      },
+    });
+
+    const categoryData = await Category.findAll();
+    console.log(productData);
+    const products = productData.map((product) => product.get({ plain: true }));
+    console.log(products);
+    const categories = categoryData.map((category) =>
+      category.get({ plain: true })
+    );
+    res.render('homepage', {
+      products,
+      categories,
+      username: req.session.username,
+      loggedIn: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 //route to login page
