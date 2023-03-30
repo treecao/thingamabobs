@@ -63,10 +63,16 @@ From the deployed website, here is a legend of the navigation options:
 - **Tree** :https://github.com/treecao
 
 
-**Resource Links:**
+**Resource Links & Technologies used:**
 - Bulma CSS - https://bulma.io/documentation/
 - Nodemon NPM - https://www.npmjs.com/package/nodemon 
 - Handlebars - https://handlebarsjs.com/
+- Bcrypt
+- Dotenv
+- Express Sessions
+- Sequelize
+- Mysql2
+- Sqlite3
 
 
 ## License
