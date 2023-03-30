@@ -22,8 +22,9 @@
       <div class="card-content">
           <div class="content">
             <p class="title is-4"><a href='/product/{{product.id}}'>{{product.product_name}}</a></p>
-            <p class="subtitle is-6">Created by {{product.id}} on {{product.id}}</p>
             <p class="subtitle is-6"> ${{product.price}} </p>
+             <button type="submit" class="button is-primary is-fullwidth is-rounded">add to cart</button>
+            {{!-- <button type ="submit" class = "addToCart" >add to cart</button> --}}
           </div>
       </div>
     </div>
@@ -31,7 +32,7 @@
 {{/each}}
 </div>
 
-
+<script src="/javascript/adding.js"></script>
  {{!-- <h2>
         <!-- Call helper function with triple brackets to render the emoji span as HTML -->
         <a href='/product/{{product.id}}'>{{product.product_name}}</a>
