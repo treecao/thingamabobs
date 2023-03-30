@@ -221,6 +221,48 @@ const productData = [
     stock: 2,
     category_id: 6,
     },
+    {
+      product_name: 'Banana Hat',
+      img: "https://oldschool.runescape.wiki/images/Banana_hat_chathead.png?40a07",
+      description: 'OSRS Banana Hat',
+      price: 6500.00,
+      stock: 1,
+      category_id: 4,
+    },
+
+    {
+      product_name: 'Black Cat',
+      img: "https://www.marthastewart.com/thmb/uWmRQZNEQv3Vs605P-xf9aEA1es=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/black-cat-kitchen-rug-getty-0921-2000-ca89c8832a634486b9866069272ecbb6.jpg",
+      description: 'A black cat for good luck',
+      price: 44.00,
+      stock: 32,
+      category_id: 8,
+    },
+    {
+      product_name: 'Captain America',
+      img: "https://ae01.alicdn.com/kf/S5f3468a774de4be58ba948f435b962a7R/Hasbro-Marvel-Legends-Series-1-Toy-Biz-Captain-America-20th-Anniversary-6-inch-Action-Figure-Collectible.jpg_Q90.jpg_.webp",
+      description: 'Perfect for your collection',
+      price: 83.00,
+      stock: 32,
+      category_id: 7,
+    },
+
+    {
+      product_name: 'Cricket Bat',
+      img: "https://www.uscricketstore.com/wp-content/uploads/2022/05/Ton-Player-Edition.webp",
+      description: 'The best cricket bat in the world',
+      price: 220.00,
+      stock: 7,
+      category_id: 1,
+    },
+    {
+      product_name: 'Custom Dog Necklace',
+      img: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/41AHn4Rn+BL.jpg",
+      description: 'The best cricket bat in the world',
+      price: 125.00,
+      stock: 24,
+      category_id: 4,
+    },
 ];
 
 const seedProducts = () => Product.bulkCreate(productData);
