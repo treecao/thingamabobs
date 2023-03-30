@@ -3,15 +3,13 @@
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
 
-      <a href='/product/{{id}}'>{{product_name}}</a>
+      {{!-- <a href='/product/{{id}}'>{{product_name}}</a>
     </h2>
     <p>
       <img src='{{img}}' alt='Image' />
 
     </p>
-    <p>tags
-      {{id}}
-      on
+    <p>tags {{id}} on
       {{#each tags as |tag|}}
         {{tag.tag_name}}
       {{/each}}
@@ -22,7 +20,25 @@
       {{price}}
     </p>
   </div>
-</div>
+</div> --}}
+
+  <div class='mb-4 mr-4 ml-4 catalog card column is-3 is-inline-flex'>
+    <div class='card-image'>
+      <figure class="image is-3by3">
+        <img src='{{img}}' alt='Image' />
+      </figure>
+
+      <div class="card-content">
+          <div class="content">
+           <p class="title is-4">
+              {{#each tags as |tag|}} {{tag.tag_name}}
+              {{/each}}
+            </p>
+            <p>${{price}}</p>
+          </div>
+      </div>
+    </div>
+  </div>
 
 {{! The data you have to work with are each of the data points in the Product model and the Tags
 

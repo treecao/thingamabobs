@@ -1,17 +1,46 @@
 {{! Landing Page. Also this handlebar is the template for when the user selects HOME}}
-<h1 class='text-white'> Welcome {{users.first_name}}</h1>
 {{! Welcome & automatically display recommended items  
 
  }}
-{{#each categories as |category|}}
+{{!-- {{#each categories as |category|}}
   <a href='/category/{{category.id}}'>{{category.category_name}}</a>
-{{/each}}
+{{/each}} --}}
 {{! recommended items (display 5-10 items) }}
-<h2>Look at this stuff... isn't it neat ;) </h2>
 {{! See more (selecting see more will navigate the user to the full catalog of available items =) }}
-<h2> Your collection's not complete. Here are more Thingamabobs for you</h2>
 
+<section class="hero is-primary">
+  <div class="hero-body">
+    <p class="title">
+      Welcome
+    </p>
+    <p class="subtitle">
+      Look at this stuff... isn't it neat ;)
+    </p>
+  </div>
+</section>
+
+
+<div class="columns is-inline ">
 {{#each products as |product|}}
+  <div class='mb-4 mr-4 ml-4 catalog card column is-2 is-inline-flex'>
+    <div class='card-image'>
+      <figure class="image is-3by3">
+        <img src='{{product.img}}' alt='Image' />
+      </figure>
+
+      <div class="card-content">
+          <div class="content">
+            <p class="title is-4"><a href='/product/{{product.id}}'>{{product.product_name}}</a></p>
+            <p class="subtitle is-6">Created by {{product.id}} on {{product.id}}</p>
+            <p class="subtitle is-6"> ${{product.price}} </p>
+          </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
+</div>
+
+{{!-- {{#each products as |product|}}
   <div class='row mb-4 catalog'>
     <div class='col-md-5'>
       <h2>
@@ -34,4 +63,4 @@
       </p>
     </div>
   </div>
-{{/each}}
+{{/each}} --}}
