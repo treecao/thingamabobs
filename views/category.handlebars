@@ -1,31 +1,27 @@
-<h1>{{category_name}}</h1>
 
+<h1 class="pl-2 title">{{category_name}}</h1>
+
+<!-- Loop over each object in the projects array -->
+<div class="columns is-inline ">
 {{#each products as |product|}}
-
-  <div class='row mb-4 catalog'>
-    <div class='col-md-5'>
-      <h2>
-        <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-
-        <a href='/product/{{product.id}}'>{{product.product_name}}</a>
-      </h2>
-      <p>
+  <div class='mb-4 mr-4 ml-4 catalog card column is-3 is-inline-flex'>
+    <div class='card-image'>
+      <figure class="image is-3by3">
         <img src='{{product.img}}' alt='Image' />
+      </figure>
 
-      </p>
-      <p>Created by
-        {{product.id}}
-        on
-        {{product.id}}</p>
-    </div>
-    <div class='col-md-7'>
-      <p>
-        {{product.price}}
-      </p>
+      <div class="card-content">
+          <div class="content">
+            <p class="title is-4"><a href='/product/{{product.id}}'>{{product.product_name}}</a></p>
+            <p class="subtitle is-6">Created by {{product.id}} on {{product.id}}</p>
+            <p class="subtitle is-6"> ${{product.price}} </p>
+          </div>
+      </div>
     </div>
   </div>
-
 {{/each}}
+</div>
+
 
 {{! The data you have to work with are each of the data points in the Product model and the Category model
 
