@@ -1,8 +1,6 @@
 # ![alt text](/public/assets/Logo.png)
 
-https://github.com/treecao/thingamabobs 
-
-[heroku push tbd]
+https://treethingamabobs.herokuapp.com/
 
 ## Description 
 
