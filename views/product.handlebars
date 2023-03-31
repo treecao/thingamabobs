@@ -17,12 +17,12 @@
   </div>
   <div class='col-md-7'>
     <p>
-      {{price}}
+      {{price}} 
+    
     </p>
   </div>
 </div> --}}
 <p class="title is-3">
-              {{product_name}}
             </p>
   <div class='mb-4 mr-4 ml-4 catalog card column is-3 is-inline-flex'>
     
@@ -30,20 +30,14 @@
       <figure class="image is-3by3">
         <img src='{{img}}' alt='Image' />
       </figure>
+      <h1 class="title is-3">{{product_name}}</h1>
 
       <div class="card-content">
           <div class="content">
             <p class="title is-4">
-              {{description}}
-            </p>
-           
-              <ul class="title is-5 tabs is-toggle is-toggle-rounded pt-6 is-centered">
-    {{#each tags as |tag|}}
-  <li >{{tag.tag_name}}</li>
-    {{/each}}
-  </ul>
-            
+            </p>            
             <p>${{price}}</p>
+            <p>{{description}}</p>
            
             <button type="submit" class="button is-primary is-fullwidth is-rounded">add to cart</button>
           </div>
